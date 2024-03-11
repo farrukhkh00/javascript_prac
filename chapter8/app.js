@@ -49,25 +49,18 @@ var questionFour_i = prompt("Enter 1st number to check which number is small");
 var questionFour_ii = prompt("Enter 2nd number to check which number is small");
 var questionFour_iii = prompt("Enter 3rd number to check which number is small");
 
-if (questionFour_i < questionFour_ii < questionFour_iii) {
+if (questionFour_i < questionFour_ii && questionFour_i < questionFour_iii) {
     alert(`The number ${questionFour_i} is small `);
-} else if (questionFour_ii < questionFour_i < questionFour_iii) {
+} else if (questionFour_ii < questionFour_i && questionFour_ii < questionFour_iii) {
     alert(`The number ${questionFour_ii} is small `);
-} else if (questionFour_iii < questionFour_i < questionFour_ii) {
-    alert(`The number ${questionFour_ii} is small `);
+} else if (questionFour_iii < questionFour_i && questionFour_iii < questionFour_ii) {
+    alert(`The number ${questionFour_iii} is small `);
 } 
 
 // --------------------------------------------------------------------------------------------------//
 
+
 // q5
-
-// var questionFive = prompt("enter number to calculate its factorial");
-
-// if (questionFive) {} 
-
-
-
-// q6
 
 var questionSix = +prompt("enter marks of English");
 var questionSix_i = +prompt("enter marks of Urdu");
@@ -85,21 +78,24 @@ else if (percentage < 80 && percentage >= 70 ) {
 else if (percentage < 70 && percentage >= 60 ) {
     alert(`Your percentage is ${percentage} % and grade is B`);
 } else {
-    alert("not ww");
+    alert("Fail");
 }
-  
+
 // ---------------------------------------------------------------------------------//
 
-// q7
+
+// q6
  
 var temperature = +prompt("Enter temperature in celcius");
 
 var temp = ((9 / 5) * temperature) + 32;
 alert ("the temp is " + temp + " F°")
 
-// ------------------------------------------------------------------------------------//
 
-// q8
+// ---------------------------------------------------------------------------------//
+
+
+// q7
 
 var length1 = +prompt("Enter length 1 to determine what type is it");
 var length2 = +prompt("Enter length 2 to determine what type is it");
@@ -117,13 +113,36 @@ if (length1 === length2 && length2 === length3) {
     alert("Enter correct sides")
 }
 
+// ------------------------------------------------------------------------------------//
 
+// q8
 
+// ------------------------------------------------------------------------------------//
 
-// q10 
+// q9
 
 var base= +prompt("Enter base");
 var exponent = +prompt("Enter power");
  var result = Math.pow(base, exponent);
  alert(result);
 
+ // ------------------------------------------------------------------------------------//
+
+// q10
+
+var age = +prompt("enter age ");
+
+if (age >= 0 && age <= 12) {
+    alert("Child");
+}
+else if (age >= 13 && age <= 19) {
+    alert("Teenager");
+}
+else if (age >= 20 && age <= 64) {
+    alert("Adult");
+}
+else if (age >= 65 && age <= 120) {
+    alert("Senior");
+} else {
+    alert(`${age} is not correct`)
+};
